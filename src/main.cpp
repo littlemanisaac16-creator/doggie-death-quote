@@ -7,7 +7,8 @@ class $modify(PlayLayer) {
     void resetLevel() {
         PlayLayer::resetLevel();
 
-        if (auto deathLabel = static_cast<CCLabelBMFont*>(this->getChildByID("death-label"))) {
+        auto deathLabel = static_cast<CCLabelBMFont*>(this->getChildByID("death-label"));
+        if (deathLabel) {
             deathLabel->setString("Stop testing gravity!");
         }
     }
