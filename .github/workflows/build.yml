@@ -1,4 +1,4 @@
-name: new release
+name: Build Geode Mod
 
 on:
   push:
@@ -28,6 +28,9 @@ jobs:
       - name: Build Mod
         uses: geode-sdk/build-geode-mod@main
         with:
-          # This ensures it builds for the latest version of Geode
+          # This line is the fix! It links the SDK to the builder
           sdk: nightly
           combine: true
+        env:
+          # Adding this environment variable helps CMake find the SDK
+          GEODE_SDK: ${{ github.workspace }}/geode-sdk
