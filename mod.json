@@ -1,0 +1,11 @@
+{
+	"geode": "3.0.0",
+	"gd": {
+		"win": "2.2074"
+	},
+	"id": "doggie.deathquote",
+	"name": "Stop Testing Gravity",
+	"developer": "YourName",
+	"version": "v1.0.0",
+	"description": "Changes the death message to Doggie's iconic quote."
+}
