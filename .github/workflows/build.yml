@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -28,9 +25,5 @@ jobs:
       - name: Build Mod
         uses: geode-sdk/build-geode-mod@main
         with:
-          # This line is the fix! It links the SDK to the builder
           sdk: nightly
           combine: true
-        env:
-          # Adding this environment variable helps CMake find the SDK
-          GEODE_SDK: ${{ github.workspace }}/geode-sdk
